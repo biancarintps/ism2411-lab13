@@ -1,3 +1,7 @@
+#A boolean filter keeps only the rows that match a condition and drops the rest.
+#df["revenue"] gives one column as a Series and df[["revenue"]] gives that column as a DataFrame. It matters when you need a table or when a function needs a DataFrame instead of a Series.
+#Pandas can handle thousands of rows and repeat the same steps with a few lines of code so it is much faster and easier to redo than using excel
+
 
 #--------Exercise 1 -------
 import pandas as pd
@@ -43,3 +47,7 @@ print(df['region'].value_counts())
 
 subset = df[['region', 'product', 'revenue']]
 print(subset.shape)
+
+#-------exercise 8-----
+
+df.to_csv('data/explored.csv', index=False)
