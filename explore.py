@@ -27,3 +27,9 @@ print(top5)
 big_south = df[(df['region'] == 'South') & (df['revenue'] > 1000)]
 print(len(big_south))
 print(big_south.head())
+
+#exercise 5-----
+
+df['per_unit'] = df['revenue'] / df['quantity']
+print(df.head())
+print(df['per_unit'].mean())
